@@ -1,0 +1,13 @@
+barcode file name,sample
+barcode_0,enrichment - replicate 1 - day 1
+barcode_1,enrichment - replicate 1 - day 2
+barcode_2,enrichment - replicate 1 - day 3
+barcode_3,enrichment - replicate 1 - day 4
+barcode_4,enrichment - replicate 1 - day 5
+barcode_6,enrichment - replicate 2 - day 1
+barcode_7,enrichment - replicate 2 - day 2
+barcode_8,enrichment - replicate 2 - day 3
+barcode_9,enrichment - replicate 2 - day 4
+barcode_10,enrichment - replicate 2 - day 5
+barcode_20,MACSLib pool
+barcode_5,nonbinder pool
