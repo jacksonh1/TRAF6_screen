@@ -9,7 +9,10 @@ into python 3 but it would probably be pretty straightforward if you wanted to d
 If you are using conda, you can create an environment with the same
 modules that I used to run the scripts:<br>
 `conda env create -f py2_traf6_NGS.yml`<br>
-then `conda activate py2_traf6_NGS` to use the environment
+then:<br>
+`conda activate py2_traf6_NGS`<br>
+to use the environment
+
 <br>
 The pipeline also uses the `reformat` tool from the bbtools suite [link](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/)
 
