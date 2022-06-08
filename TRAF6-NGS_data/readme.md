@@ -33,3 +33,16 @@ Then just run the driver bash script:<br>
 
 it de-interleaves the fastq files, filters out low quality reads, and tabulates the sequences. See the manuscript for details
 
+## output
+The read count files will be located in `./fastq_files/sequence_counts/`. They are tab delimited and contain the following columns (without column names):<br> 
+read counts, read counts (duplicate column), nucleotide sequence<br>
+In downstream analysis, I just remove the duplicate read count column. It is left over from a different hierarchical read counting procedure. <br>
+here is a preview of the read count files:
+```bash
+$ head -n5 fastq_files/sequence_counts/barcode_0_f_nts_only
+110166  110166  AAACAAGAACCTCAGGAAATCGATTTCCCGG
+4812    4812    TATAATGCTCCTACGGAAAATGAGTGGCCGG
+4157    4157    GGGAATCAGCCTGTGGAAGATGATTGGCCGG
+3093    3093    CTTAATTTGCCTGAGGAATCTGATTGGCCGG
+2807    2807    GTGAATTATCCTACGGAAACTGATTGGCCGG
+```
