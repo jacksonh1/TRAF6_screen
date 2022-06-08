@@ -9,3 +9,4 @@
 
 
 - run analysis and do diff with supplementary tables to make sure they are identical
+- export traf conda environment
