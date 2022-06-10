@@ -1,0 +1,42 @@
+{
+    "filepaths": {
+        "sequence counts directory": "../TRAF6-NGS_data/fastq_files/sequence_counts/",
+        "MACSlib counts file (enrichment input)": "../TRAF6-NGS_data/fastq_files/sequence_counts/barcode_20_f_nts_only",
+        "sample key file": "./enrichment_key.csv",
+        "merged enrichment table files": [
+            "../supplementary_data_files2/enrichment_rep1_readcounts.csv",
+            "../supplementary_data_files2/enrichment_rep2_readcounts.csv"
+        ]
+    },
+    "experiment barcode lists": {
+        "enrichment_rep1": [
+            "barcode_0",
+            "barcode_1",
+            "barcode_2",
+            "barcode_3",
+            "barcode_4",
+            "barcode_20"
+        ],
+        "enrichment_rep2": [
+            "barcode_6",
+            "barcode_7",
+            "barcode_8",
+            "barcode_9",
+            "barcode_10",
+            "barcode_20"
+        ]
+    },
+    "barcode name key": {
+        "barcode_0": "day_1",
+        "barcode_1": "day_2",
+        "barcode_2": "day_3",
+        "barcode_3": "day_4",
+        "barcode_4": "day_5",
+        "barcode_6": "day_1",
+        "barcode_7": "day_2",
+        "barcode_8": "day_3",
+        "barcode_9": "day_4",
+        "barcode_10": "day_5",
+        "barcode_20": "day0 pre-enrichment (MACSlib)"
+    }
+}
