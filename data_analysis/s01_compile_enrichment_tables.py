@@ -44,7 +44,7 @@ def main(parameter_file):
     experiments = list(params["experiment barcode lists"].keys())
 
     # output file directory
-    output_folder = "../supplementary_data_files-check/
+    output_folder = params["filepaths"]["output directory"]
     if not os.path.exists(output_folder):
         os.mkdir(output_folder)
 
@@ -55,14 +55,15 @@ def main(parameter_file):
         R=enrichment_merge(
             barcode_list, count_file_dir, sample_renaming_key
         )
+        R=R[['seq','pre-enrichment (MACSlib)','day_1','day_2','day_3','day_4','day_5']]
         output_file = os.path.join(output_folder, exp + "_readcounts.csv")
         table_files.append(output_file)
         R.to_csv(output_file, index=False)
         print('file saved to {}'.format(output_file))
 
     # update parameter json file to include new files
-    params['filepaths']['merged enrichment table files']=table_files
-    with open('parameters.json', 'w') as f:
+    params['filepaths']['merged enrichment tables']=table_files
+    with open(parameter_file, 'w') as f:
         json.dump(params, f, indent=4)
 
 

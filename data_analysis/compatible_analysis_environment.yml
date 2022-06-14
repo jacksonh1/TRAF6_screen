@@ -1,0 +1,11 @@
+name: traf
+channels:
+  - defaults
+dependencies:
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - biopython
+  - jupyter
+prefix: /Users/jackson/opt/anaconda3/envs/traf

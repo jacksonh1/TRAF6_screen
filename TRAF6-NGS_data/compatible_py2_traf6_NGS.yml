@@ -1,0 +1,15 @@
+name: py2
+channels:
+  - defaults
+dependencies:
+  - python=2.7
+  - notebook
+  - decorator=4.4.0
+  - functools_lru_cache
+  - pandas
+  - matplotlib
+  - numpy
+  - seaborn
+  - scipy
+  - biopython
+prefix: /Users/jackson/opt/anaconda3/envs/py2
