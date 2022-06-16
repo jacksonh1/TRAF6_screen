@@ -1,7 +1,4 @@
 name: py2_traf6_NGS
-channels:
-  - conda-forge
-  - defaults
 dependencies:
   - appnope=0.1.0=py27hb466136_0
   - backports=1.1=pyhd3eb1b0_0
@@ -92,4 +89,3 @@ dependencies:
   - wheel=0.37.1=pyhd3eb1b0_0
   - zeromq=4.3.4=h23ab428_0
   - zlib=1.2.11=h4dc903c_4
-prefix: /Users/jackson/opt/anaconda3/envs/py2

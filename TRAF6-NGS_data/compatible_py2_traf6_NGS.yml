@@ -1,6 +1,4 @@
-name: py2
-channels:
-  - defaults
+name: py2_traf6_NGS
 dependencies:
   - python=2.7
   - notebook
@@ -12,4 +10,3 @@ dependencies:
   - seaborn
   - scipy
   - biopython
-prefix: /Users/jackson/opt/anaconda3/envs/py2
