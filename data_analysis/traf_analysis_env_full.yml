@@ -1,8 +1,4 @@
-name: traf
-channels:
-  - plotly
-  - conda-forge
-  - defaults
+name: traf_analysis_env
 dependencies:
   - appdirs=1.4.4=pyhd3eb1b0_0
   - appnope=0.1.2=py39hecd8cb5_1001
@@ -156,4 +152,3 @@ dependencies:
   - pip:
     - localcider==0.1.19
     - logomaker==0.8
-prefix: /Users/jackson/opt/anaconda3/envs/traf

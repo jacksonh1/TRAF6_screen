@@ -11,6 +11,6 @@ contains the raw NGS data (fastq files) and scripts that were used to process, f
  
 
 ### ./NGS_data_analysis/
-further filtering and processing of NGS data into tables for further analysis and final sets of binder and nonbinder sequences
+additional filtering and processing of NGS data into tables for further analysis and final sets of binder and nonbinder sequences
 
 

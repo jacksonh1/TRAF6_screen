@@ -1,6 +1,4 @@
-name: traf
-channels:
-  - defaults
+name: traf_analysis_env
 dependencies:
   - pandas
   - numpy
@@ -8,4 +6,3 @@ dependencies:
   - seaborn
   - biopython
   - jupyter
-prefix: /Users/jackson/opt/anaconda3/envs/traf
