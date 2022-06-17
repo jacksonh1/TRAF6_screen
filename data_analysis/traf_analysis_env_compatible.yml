@@ -1,8 +1,12 @@
 name: traf_analysis_env
+channels:
+  - defaults
 dependencies:
   - pandas
   - numpy
   - matplotlib
   - seaborn
   - biopython
+  - plotly
   - jupyter
+  - requests

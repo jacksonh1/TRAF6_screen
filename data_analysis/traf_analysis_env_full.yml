@@ -1,4 +1,8 @@
 name: traf_analysis_env
+channels:
+  - plotly
+  - conda-forge
+  - defaults
 dependencies:
   - appdirs=1.4.4=pyhd3eb1b0_0
   - appnope=0.1.2=py39hecd8cb5_1001

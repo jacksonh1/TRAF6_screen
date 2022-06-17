@@ -1,4 +1,7 @@
 name: py2_traf6_NGS
+channels:
+  - conda-forge
+  - defaults
 dependencies:
   - appnope=0.1.0=py27hb466136_0
   - backports=1.1=pyhd3eb1b0_0
