@@ -18,10 +18,10 @@ if you are on linux or windows, you should probably use:<br>
 then:<br>
 `conda activate py2_traf6_NGS`<br>
 instead.<br>
-`py2_traf6_NGS_full.yml` is the exact environment I used on macbut the dependencies and their versions will probably be different on other operating systems. The "compatible" version (`py2_traf6_NGS_compatible.yml`) was generated with `conda env export --from-history` and should work for any operating system
-
+`py2_traf6_NGS_full.yml` is the exact environment I used on mac but the dependencies and their versions will probably be different on other operating systems. The "compatible" version (`py2_traf6_NGS_compatible.yml`) was generated with `conda env export --from-history` and should work for any operating system
 <br>
-The pipeline also uses the `reformat` tool from the bbtools suite [link](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/)
+
+The pipeline also uses the `reformat` tool from the bbtools suite. [bbtools Link](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/) 
 
 
 ## using the scripts
