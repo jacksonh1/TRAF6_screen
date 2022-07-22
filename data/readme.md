@@ -1,5 +1,6 @@
 # NGS data
-In this folder (`TRAF6_screen/TRAF6-NGS_data`) is the NGS data associated with the manuscript entitled: **Molecular determinants of TRAF6 binding specificity suggest that native interaction partners are not optimized for affinity**. [BioRxiv link](https://www.biorxiv.org/content/10.1101/2022.05.08.491058v3) <br>
+In this folder (`TRAF6_screen/data`) is the NGS data associated with the manuscript entitled: **Molecular determinants of TRAF6 binding specificity suggest that native interaction partners are not optimized for affinity**. [BioRxiv link](https://www.biorxiv.org/content/10.1101/2022.05.08.491058v3) <br>
+The data processing done here is just to deinterleave the paired-end reads, filter low quality reads, and then count the number of reads of each sequence in each sample. Further processing is done in `../analysis/`<br>
 
 
 ## setup
@@ -21,7 +22,7 @@ instead.<br>
 `py2_traf6_NGS_full.yml` is the exact environment I used on mac but the dependencies and their versions will probably be different on other operating systems. The "compatible" version (`py2_traf6_NGS_compatible.yml`) was generated with `conda env export --from-history` and should work for any operating system
 <br>
 
-The pipeline also uses the `reformat` tool from the bbtools suite. [bbtools Link](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/) 
+The pipeline also uses the `reformat` tool (version 38.94) from the bbtools suite. [bbtools Link](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/) 
 
 
 ## using the scripts

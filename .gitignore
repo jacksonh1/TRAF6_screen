@@ -1,3 +1,23 @@
+# I uploaded the compressed fastqs on initial commit but they won't be changed anymore 
+# so I want to ignore them for future pushes, since they tend to slow down git
+# *.tar.gz
+# ./data/fastq_files/barcode_5.tar.gz
+# ./data/fastq_files/barcode_9.tar.gz
+# ./data/fastq_files/barcode_21.tar.gz
+# ./data/fastq_files/barcode_7.tar.gz
+# ./data/fastq_files/barcode_3.tar.gz
+# ./data/fastq_files/barcode_1.tar.gz
+# ./data/fastq_files/barcode_4.tar.gz
+# ./data/fastq_files/barcode_8.tar.gz
+# ./data/fastq_files/barcode_6.tar.gz
+# ./data/fastq_files/barcode_20.tar.gz
+# ./data/fastq_files/barcode_2.tar.gz
+# ./data/fastq_files/barcode_10.tar.gz
+# ./data/fastq_files/barcode_0.tar.gz
+
+
+
+
 
 *.pyc
 

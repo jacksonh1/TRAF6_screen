@@ -8,7 +8,7 @@ import src.traf_pepseq_tools as traf_tools
 
 def calc_read_fraction(c, cols):
     '''calculate readfraction for each day'''
-    # I probably don't need to make all of these copies but I'm not really running out of memory
+    # I probably don't need to make all of these dataframe copies but I'm not really running out of memory
     #or running into bottlenecks
     counts = c.copy()
     T = counts[cols].sum()
@@ -126,11 +126,12 @@ def get_binders_from_day4_5(freq_df, counts_df, mask_count_cutoff=20, day45_cuto
     return c_binders_filtered
 
 
-def driver(file, initial_count_cutoff, cols):
+def driver(file, cols, initial_count_cutoff=50, mask_count_cutoff=20, day45_cutoff=20, enrichment_cutoff=2):
+    print(f"filters used when processing {file}\n{initial_count_cutoff=}\n{mask_count_cutoff=}\n{day45_cutoff=}\n{enrichment_cutoff=}")
     c = pd.read_csv(file)
     c = filter_across_multiple_columns(c, initial_count_cutoff, cols)
     f = calc_read_fraction(c, cols)
-    df = get_binders_from_day4_5(f, c, mask_count_cutoff=20, day45_cutoff=20, enrichment_cutoff=2)
+    df = get_binders_from_day4_5(f, c, mask_count_cutoff=mask_count_cutoff, day45_cutoff=day45_cutoff, enrichment_cutoff=enrichment_cutoff)
     return df2unique_seq_list(df)
 
 
@@ -140,18 +141,27 @@ def main(parameter_file):
         params = json.load(f)
 
     table_files = params['filepaths']['merged enrichment tables']
-    initial_count_cutoff = 50
     cols = params['enrichment count columns']
     output_file = os.path.join(params['filepaths']['output directory'], 'final_binder_list.txt')
 
+    '''
+    I first filter for sequences that have a read count of >= 50 reads in at least one of the enrichment
+    samples. This might be confusing because I used a cutoff of 20 in other places. But I decided to do
+    a different initial filter here because I think it helps to isolate sequences that significantly enrich/deplete
+    throughout the enrichment.
+    '''
+
+    readcount_filters=params["final binder readcount filters"]
+
+
     binders = []
     for file in table_files:
-        binders.append(driver(file, initial_count_cutoff, cols))
+        binders.append(driver(file, cols, **readcount_filters))
 
     final_binders = traf_tools.union_2_lists(binders[0],binders[1])
     traf_tools.write_seqlist(final_binders, output_file)
 
-    print(f'number of unique seqs with >=20 reads on day 4 or 5 and that enriched at least 2 of the 4 nights: {len(final_binders)}')
+    print(f'number of unique seqs with >=20 reads on day 4 or 5 and that enriched at least 2 of the 4 rounds: {len(final_binders)}')
     print('file saved to {}'.format(output_file))
 
     # update parameter json file to include new files

@@ -1,5 +1,5 @@
-# data_analysis
-In this folder (`TRAF6_screen/data_analysis`) is code for further processing the NGS data. It processes the sequence counts in `../TRAF6-NGS_data/fastq_files/sequence_counts/` to generate the tables/files in `../supplementary_data_files/`<br>
+# analysis
+In this folder (`TRAF6_screen/analysis`) is code for further processing the NGS data. It processes the sequence counts in `../data/fastq_files/sequence_counts/` to generate the tables/files in `../supplementary_data_files/`<br>
 
 
 ## setup

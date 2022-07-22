@@ -1,4 +1,5 @@
 import json
+import os
 import sys
 
 import src.traf_pepseq_tools as traf_tools
@@ -15,7 +16,7 @@ def filter_rename_single_column_table(df1, count_cutoff=0, col='barcode_5'):
     return df
 
 
-def main(parameter_file,output_file=None):
+def main(parameter_file,save2file=False):
     # open parameters.json file
     with open(parameter_file) as f:
         params = json.load(f)
@@ -27,7 +28,8 @@ def main(parameter_file,output_file=None):
 
     print('number of sequences with >=20 reads: ', len(nb_df_20rcc['AA_seq'].unique()))
 
-    if output_file:
+    if save2file:
+        output_file = os.path.join(params['filepaths']['output directory'], 'nonbinder_readcounts-processed.csv')
         print('file saved to {}'.format(output_file))
         nb_df_20rcc.to_csv(output_file, index=False)
 
@@ -39,7 +41,7 @@ def main(parameter_file,output_file=None):
 
 
 if __name__ == "__main__":
-    main(parameter_file='./parameters.json', output_file='../supplementary_data_files-check/nonbinder_readcounts-processed.csv')
+    main(parameter_file='./parameters.json', save2file=True)
 
 
 

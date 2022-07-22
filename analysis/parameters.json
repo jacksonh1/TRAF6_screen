@@ -1,7 +1,7 @@
 {
     "filepaths": {
-        "sequence counts directory": "../TRAF6-NGS_data/fastq_files/sequence_counts/",
-        "nonbinder sequence counts file": "../TRAF6-NGS_data/fastq_files/sequence_counts/barcode_5_f_nts_only",
+        "sequence counts directory": "../data/fastq_files/sequence_counts/",
+        "nonbinder sequence counts file": "../data/fastq_files/sequence_counts/barcode_5_f_nts_only",
         "output directory": "../supplementary_data_files/"
     },
     "experiment barcode lists": {
@@ -43,5 +43,11 @@
         "day_4",
         "day_5"
     ],
-    "readcount cutoff": 20
+    "readcount cutoff": 20,
+    "final binder readcount filters": {
+        "initial_count_cutoff": 50,
+        "mask_count_cutoff": 20,
+        "day45_cutoff": 20,
+        "enrichment_cutoff": 2
+    }
 }
