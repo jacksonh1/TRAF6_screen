@@ -3,6 +3,23 @@ In this folder (`TRAF6_screen/data`) is the NGS data associated with the manuscr
 The data processing done here is just to deinterleave the paired-end reads, filter low quality reads, and then count the number of reads of each sequence in each sample. Further processing is done in `../analysis/`<br>
 
 
+## FastQ files in `./fastq_files/`
+barcode file name | sample
+--- | ---
+`barcode_0.tar.gz` | enrichment - replicate 1 - day 1<br>
+`barcode_1.tar.gz` | enrichment - replicate 1 - day 2<br>
+`barcode_2.tar.gz` | enrichment - replicate 1 - day 3<br>
+`barcode_3.tar.gz` | enrichment - replicate 1 - day 4<br>
+`barcode_4.tar.gz` | enrichment - replicate 1 - day 5<br>
+`barcode_6.tar.gz` | enrichment - replicate 2 - day 1<br>
+`barcode_7.tar.gz` | enrichment - replicate 2 - day 2<br>
+`barcode_8.tar.gz` | enrichment - replicate 2 - day 3<br>
+`barcode_9.tar.gz` | enrichment - replicate 2 - day 4<br>
+`barcode_10.tar.gz` | enrichment - replicate 2 - day 5<br>
+`barcode_20.tar.gz` | MACSLib pool<br>
+`barcode_5.tar.gz` | nonbinder pool<br>
+
+
 ## setup
 To process the NGS data, you need python2. 
 python2 is no longer supported. There are currently no plans to convert this pipeline 
